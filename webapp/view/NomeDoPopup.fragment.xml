@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+controllerName="numen.talentos.app001.controller.Master"
+xmlns="sap.m" 
+xmlns:core="sap.ui.core"
+mlns:f="sap.ui.layout.form"> 
+
+<Dialog stretch="false" resizable="true" draggable="true" title="TITULO DO POPUP"> 
+        <content>  
+                <f:SimpleForm 
+                    minWidth="1024"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+                    columnsL="1" columnsM="1">
+                    <f:content>
+                        <Label text="{i18n>CompanyIDColon}" visible="{editCompanyModel>/isNew}" />
+                        <Input type="Text" visible="{editCompanyModel>/isNew}" value="{Carrid}" />
+                        <Label text="{i18n>formCompanyName}"/>
+                        <Input type="Text" value="{Carrname}" />
+                        <Label text="{i18n>formCurrCode}"/>
+                        <Input type="Text" value="{Currcode}"/>
+                        <Label text="{i18n>formUrl}"/>
+                        <Input type="Text" value="{Url}"/>
+                    </f:content> 
+                </f:SimpleForm> 
+
+      
+
+        </content>  
+
+      
+
+        <buttons> 
+
+         <Button text="{i18n>salvar_btn}" type="Emphasized" press="FuncaoJSParaSalvar"/>                     
+
+         <Button text="{i18n>voltar_txt}" type="Default" press="onCancelNewCompany"/> 
+
+                       
+
+        </buttons>   
+
+ 
+
+    </Dialog> 
+
+</core:FragmentDefinition> 
